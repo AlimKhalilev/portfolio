@@ -1,0 +1,106 @@
+html,
+body {
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI';
+    color: var(--color-white);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+
+    // Avoid browsers rendering the focus ring in some cases.
+    outline: 0;
+
+    // Avoid some cases where the browser will still render the native controls (see #9049).
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    clip: rect(0 0 0 0);
+}
+
+.grid {
+    margin: 0 auto;
+    max-width: 1200px;
+
+    @media (max-width: 1200px) {
+        max-width: 1024px;
+    }
+
+    @media (max-width: 992px) {
+        max-width: 90%;
+    }
+
+    @media (max-width: 768px) {
+        max-width: 95%;
+    }
+
+    @media (max-width: 576px) {
+        max-width: 95%;
+    }
+}
+
+.text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.lazy-transition {
+    --transition: 0.3s ease-in-out;
+}
+
+mat-icon.mat-icon {
+    display: flex;
+    min-width: 16px;
+    max-width: 16px;
+    height: 16px;
+
+    &.icon-12 {
+        min-width: 12px;
+        max-width: 12px;
+        height: 12px;
+    }
+
+    &.icon-16 {
+        min-width: 16px;
+        max-width: 16px;
+        height: 16px;
+    }
+
+    &.icon-20 {
+        min-width: 20px;
+        max-width: 20px;
+        height: 20px;
+    }
+
+    &.icon-24 {
+        min-width: 24px;
+        max-width: 24px;
+        height: 24px;
+    }
+
+    &.icon-32 {
+        min-width: 32px;
+        max-width: 32px;
+        height: 32px;
+    }
+
+    &.icon-36 {
+        min-width: 36px;
+        max-width: 36px;
+        height: 36px;
+    }
+
+    &.icon-48 {
+        min-width: 48px;
+        max-width: 48px;
+        height: 48px;
+    }
+}

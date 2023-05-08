@@ -1,0 +1,29 @@
+.home-page {
+
+    // .home-page__cards
+
+    &__cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        padding: 30px;
+    
+        @media (max-width: 992px) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    
+        @media (max-width: 680px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 470px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    // .home-page__card
+
+    &__card {
+        
+    }
+}

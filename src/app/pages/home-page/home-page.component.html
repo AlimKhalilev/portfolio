@@ -1,0 +1,21 @@
+<div class="home-page__cards grid">
+    <ng-template #loadDataTpl>
+        <app-spinner *ngIf="!portfolioWorksService.worksLoadError"></app-spinner>
+    </ng-template>
+
+    <ng-template #noDataTpl>
+        <p>Нет данных для отображения</p>
+    </ng-template>
+
+    <ng-container *ngIf="portfolioWorksService.worksLoadError">
+        <p>Ошибка загрузки :(</p>
+    </ng-container>
+
+    <ng-container *ngIf="portfolioWorksService.works as works; else loadDataTpl">
+        <ng-container *ngIf="works.length; else noDataTpl">
+            <ng-container *ngFor="let work of works">
+                <app-work-card class="home-page__card" [work]="work"></app-work-card>
+            </ng-container>
+        </ng-container>
+    </ng-container>
+</div>
